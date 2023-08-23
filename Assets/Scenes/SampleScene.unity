@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 44248036}
   - component: {fileID: 44248038}
   - component: {fileID: 44248037}
+  - component: {fileID: 44248039}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -215,6 +216,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &44248039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44248035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4639ce108fbd3342a93bbcb2dc38ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensX: 3000
+  sensY: 3000
+  orientation: {fileID: 2011174447}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +416,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b60b5d9ab488ec14cbb81d9c9076261c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -455,6 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1483514354}
   - component: {fileID: 1483514353}
+  - component: {fileID: 1483514355}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -507,6 +524,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483514355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483514352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24505f4ab20213f47b20f3287bdfe5ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  groundDrag: 5
+  playerHeight: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  orientation: {fileID: 2011174447}
 --- !u!1 &1562606042
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562606043}
+  - component: {fileID: 1562606044}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -539,6 +576,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1562606044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562606042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89a02793756b024aad4905a5aeed801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraPosition: {fileID: 835408997}
 --- !u!1 &1812449026
 GameObject:
   m_ObjectHideFlags: 0
