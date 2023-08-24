@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
+    public Transform FirePoint;
+    public GameObject bulletPrefab;
+
     [Header("keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
 
@@ -55,6 +58,11 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
     }
 
     private void FixedUpdate()
@@ -118,5 +126,10 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation);
     }
 }
